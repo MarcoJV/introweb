@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content"width=device-width, initial-scale=1.8">
+    <title>Document</title>
+</head>
+
+<body >
+  <div class="cuadrado verde">
+    hola
+  </div>
+
+  <div class="cuadrado verde rojo">
+    hola2
+  </div>
+
+  <div class="cuadrado rojo verde"> <!--jerarquía primero la primera definida en style-->
+    hola2
+  </div>
+
+    <div class="cuadrado verde rojo" id="gris">
+      hola3
+    </div>
+
+    <div class="cuadrado fondo-animado">
+      cambia
+    </div>
+
+    <div class="cuadrado fondo-animado2">
+      cambia2
+    </div>
+
+    <div style="rojo" class="cuadrado verde rojo" id="gris">
+      hola3
+    </div>
+
+    <div>
+      <p class="texto"> hola ciclolimite</p>
+    </div>
+
+  <div id="rectangulo">
+    <p class="texto"> hola ciclolimite</p>
+  </div>
+
+  <div id="rectangulo">
+    <p> hola ciclolimite</p>
+  </div>
+
+  <div id="rectangulo2">
+    <p> hola ciclolimite</p>
+  </div>
+
+</body>
+
+  <style>
+
+  .fondo-animado{
+      animation-name: color;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+  }
+
+  .fondo-animado2{
+    position: relative;
+      animation-name: color2;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+  }
+
+  /* Animaciones */
+  @keyframes color {
+      from{
+        background-color: indigo;
+      }
+      to {
+        background-color: lawngreen;
+      }
+  }
+
+
+  @keyframes color2 {
+         0% {
+             background-color: red;
+             left: 0px;
+         }
+         50% {
+             background-color: blue;
+             left: 64px;
+         }
+         100% {
+             background-color: red;
+             left: 0px;
+         }
+     }
+
+
+    /* tag */
+    body {
+      margin: 0;
+      background-color: whitesmoke;
+    }
+
+    /*Clase*/
+    .cuadrado{
+      width: 32px;
+      height: 32px;
+      border: 2px dotted #000000;
+    }
+
+    .verde{
+      background-color: green;
+    }
+
+    .verde{
+      background-color: red;
+    }
+
+    .texto{
+      color: blue;
+    }
+
+    /*id*/  /* ID debe ser único, las clases no*/
+    #rectangulo {
+      width: 512px;
+      height: 64px;
+      background-color: red;
+    }
+
+    #rectangulo p {
+      color: green;
+    }
+
+    #gris {
+      background-color: grey;
+    }
+
+    #rectangulo2 {
+      position: absolute;
+      bottom: 0px;
+      width: 512px;
+      height: 64px;
+      background-color: red;
+    }
+
+  </style>
+
+</html>
